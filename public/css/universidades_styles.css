@@ -1,0 +1,508 @@
+/* Efecto de gradiente para el fondo y fuente*/
+body {
+    background: linear-gradient(180deg, #667da7, #000000);
+    background-size: 400% 400%;
+    -webkit-animation: AnimationName 0s ease infinite;
+    -moz-animation: AnimationName 0s ease infinite;
+    animation: AnimationName 0s ease infinite;
+}
+
+.tituloUniversidades{
+    font-family: 'Poppins', sans-serif;
+}
+
+@-webkit-keyframes AnimationName {
+    0% {
+        background-position: 0% 51%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 51%;
+    }
+}
+
+@-moz-keyframes AnimationName {
+    0% {
+        background-position: 0% 51%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 51%;
+    }
+}
+
+@keyframes AnimationName {
+    0% {
+        background-position: 0% 51%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 51%;
+    }
+}
+
+/* ------------------------------------------------------------------------------ */
+
+/* Estilos para los enlaces de la barra de navegación */
+.nav-link {
+    position: relative;
+    color: #fff;
+    /* Color del texto */
+    text-decoration: none;
+    /* Quitar subrayado por defecto */
+    font-size: 28px;
+}
+
+/* Efecto de subrayado */
+.nav-link:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    /* Color del subrayado */
+    transition: width 0.4s ease, left 0.4s ease;
+    transform: translateX(-50%);
+    /* Centra el subrayado */
+}
+
+/* Cuando se pasa el ratón por encima */
+.nav-link:hover:after {
+    width: 80%;
+    /* Ancho del subrayado al pasar el ratón */
+}
+
+/* Clase para ajustar el tamaño del logo */
+.header-img {
+    max-width: 50px;
+    /* Ajusta el tamaño del logo */
+    height: auto;
+    /* Mantén la proporción de la imagen */
+}
+
+/* ------------------------------------------------------------------------------ */
+
+/* Estilos para el id h1 */
+#h1 {
+    position: absolute;
+    /* Posiciona el texto de forma absoluta */
+    top: 14%;
+    /* Centra verticalmente */
+    /* font-style: italic; */
+    /* Texto en cursiva */
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+    /* Sombreado del texto */
+}
+
+.fade-in-up {
+    animation: fadeInUp 1s ease forwards;
+    opacity: 0;
+    /* Asegúrate de que comienza como invisible */
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        /* Totalmente invisible al inicio */
+        transform: translateY(-20px);
+        /* Posición inicial */
+    }
+
+    100% {
+        opacity: 1;
+        /* Totalmente visible al final */
+        transform: translateY(0);
+        /* Regresa a su posición original */
+    }
+}
+
+.social-links a {
+    text-decoration: none;
+    /* Quitar subrayado */
+    display: inline-block;
+    /* Asegura que el espacio alrededor de la imagen se maneje correctamente */
+    margin: 0;
+    /* Ajusta el margen */
+    padding: 0;
+    /* Ajusta el padding */
+}
+
+.social-links {
+    display: flex;
+    /* Habilita Flexbox */
+    align-items: center;
+    /* Alinea verticalmente al centro */
+}
+
+.social-links img {
+    width: 40px;
+    /* Ancho fijo para todas las imágenes */
+    height: auto;
+    /* Mantiene la proporción de la imagen */
+}
+
+.vertical-separator {
+    border-left: 2px solid #000;
+    /* Borde izquierdo como separador */
+    height: 150%;
+    /* Altura total del contenedor */
+    margin: 0 20px;
+    /* Espaciado horizontal */
+    padding-left: 20px;
+    /* Espaciado interno si se desea */
+}
+
+section {
+    display: flex;
+    width: 750px;
+    height: 470px;
+    margin: 0 auto;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    /* Sombreado alrededor del section */
+    border-radius: 10px;
+    /* (opcional) redondea las esquinas del contenedor */
+}
+
+section img {
+    width: 0px;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: .8;
+    transition: .5s ease;
+}
+
+section img:hover {
+    cursor: crosshair;
+    width: 300px;
+    opacity: 1;
+    filter: contrast(120%);
+}
+
+hr {
+    border: none;
+    /* Elimina el borde por defecto */
+    height: 4px;
+    /* Grosor de la línea */
+    background-color: #3a315a;
+    /* Color de la línea */
+    border-radius: 5px;
+    /* Bordes redondeados */
+    margin: 20px 0;
+    /* Espaciado vertical */
+}
+
+/* ------------------------------------------------------------------------------ */
+
+#universidades {
+    margin-top: 5%;
+}
+
+#barra-busqueda {
+    margin-top: 12%;
+}
+
+/* ------------------------------------------------------------------------------ */
+
+/* Estilos para las tarjetas de las universidades */
+#universidades .card {
+    height: 80%;
+    /* Hace que todas las tarjetas ocupen el 100% de la altura del contenedor */
+}
+
+/* Asegura que el contenedor de la tarjeta sea un flex container */
+#universidades .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* Centra el contenido verticalmente */
+    text-align: center;
+    /* Centra el texto */
+}
+
+/* Asegura que las tarjetas tengan el mismo tamaño */
+#universidades .col-md-4 {
+    display: flex;
+    /* Permite que los elementos secundarios ocupen el mismo tamaño */
+}
+
+/* ------------------------------------------------------------------------------ */
+
+/* Estilos para la navegación de paginación */
+.pagination {
+    position: relative;
+    /* Cambia a posición relativa */
+    margin-top: 30px;
+    /* Espacio entre las tarjetas y la paginación */
+    width: 100%;
+    /* Asegúrate de que ocupe el ancho completo */
+    display: flex;
+    /* Si necesitas alinear los botones, utiliza flexbox */
+    justify-content: center;
+    /* Centra horizontalmente */
+    z-index: 1000;
+    /* Asegura que la paginación esté por encima de otros elementos */
+}
+
+/* Estilos para los botones de paginación */
+.pagination a {
+    padding: 10px 15px;
+    /* Espaciado interno */
+    margin: 0 5px;
+    /* Espacio entre botones */
+    background-color: rgb(99, 219, 255);
+    /* Color de fondo */
+    color: rgb(53, 53, 53);
+    /* Color del texto */
+    text-decoration: none;
+    /* Sin subrayado */
+    border-radius: 5px;
+    /* Bordes redondeados */
+    transition: background-color 0.3s;
+    /* Transición suave para el color de fondo */
+    font-size: 16px;
+    /* Tamaño de la fuente */
+}
+
+/* Efecto hover para los botones */
+.pagination a:hover {
+    background-color: #0056b3;
+    /* Color más oscuro en hover */
+    /* Color de texto más claro en hover */
+    color: white;
+}
+
+/* Botón activo */
+.pagination .active a {
+    background-color: #0056b3;
+    /* Color de fondo para el botón activo */
+    pointer-events: none;
+    /* Deshabilita el clic en el botón activo */
+}
+
+/* Estilos para botones deshabilitados */
+.pagination .disabled a {
+    background-color: #cccccc;
+    /* Color de fondo para botones deshabilitados */
+    color: #666666;
+    /* Color del texto para botones deshabilitados */
+    pointer-events: none;
+    /* Deshabilita clics en botones deshabilitados */
+}
+
+
+/* Espaciado para el contenedor de universidades */
+#universidades {
+    margin-bottom: 10px;
+    /* Espacio para no solaparse con la paginación */
+}
+
+/* ------------------------------------------------------------------------------ */
+
+/* Estilo para las cartas de las universidades */
+.container {
+    margin-top: 30px;
+    /* Espacio superior para el contenedor */
+}
+
+.card {
+    opacity: 0.8;
+    color: #000;
+    border: none;
+    /* Sin borde */
+    border-radius: 10px;
+    /* Bordes redondeados */
+    transition: background-color 0.3s, transform 0.3s;
+    /* Transiciones suaves para color y transformación */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    /* Sombra suave */
+    filter: contrast(120%);
+}
+
+/* Efecto de opacidad al pasar el ratón */
+.card:hover {
+    background-color: #91b6ff;
+    /* Fondo blanco sólido al pasar el ratón */
+    transform: translateY(-5px);
+    /* Levanta la tarjeta un poco */
+    opacity: 1;
+    filter: contrast(150%);
+    cursor: pointer;
+}
+
+/* Títulos de las tarjetas */
+.card-title {
+    color: #333;
+    /* Color del texto */
+    font-weight: bold;
+    /* Negrita para el título */
+}
+
+/* Texto en el caso de que no haya universidades */
+.text-light {
+    color: #f8f9fa;
+    /* Color claro para el texto */
+}
+
+/* Ajuste de tamaño para el texto en pantallas pequeñas */
+.fs-2 {
+    font-size: 1.5rem;
+    /* Tamaño de fuente para el texto */
+}
+
+#root {
+    display: grid;
+    min-height: 100dvh;
+    grid-template-rows: auto 1fr auto;
+}
+
+/* -------------------------------------------------------------- */
+
+/* Estilo para el chatbot */
+.chatbot-container {
+    position: fixed;
+    bottom: 70px;
+    /* Espacio por encima del ícono */
+    right: 20px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    display: none;
+    /* Inicialmente oculto */
+    flex-direction: column;
+    opacity: 0;
+    /* Comienza invisible */
+    transform: translateY(20px);
+    /* Comienza desplazado */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    /* Transición suave para abrir/cerrar */
+    z-index: 9999; /* Asegura que el chatbot esté por encima de otros elementos */
+}
+
+.chatbot-container.show {
+    display: flex;
+    /* Cambia a flex cuando esté visible */
+    opacity: 1;
+    /* Hacer visible */
+    transform: translateY(0);
+    /* Regresar a la posición original */
+}
+
+.chatbot-header {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chatbot-body {
+    padding: 10px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.bot-message {
+    background-color: #dad5d5;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px 0;
+}
+
+.chatbot-footer {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.quick-reply {
+    margin: 5px 0;
+    padding: 10px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.close-chat {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Estilo para el ícono del chatbot */
+.chatbot-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    /* Hacerlo completamente redondo */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s;
+    /* Cambia de color al pasar el ratón */
+    width: 70px;
+    /* Aumentar el tamaño del ícono */
+    height: 70px;
+    /* Aumentar el tamaño del ícono */
+}
+
+.chatbot-icon:hover {
+    background-color: #a7d3ff;
+    /* Color al pasar el ratón */
+}
+
+.chatbot-icon-image {
+    width: 60%;
+    /* Ajustar el tamaño de la imagen */
+    height: 60%;
+    /* Ajustar el tamaño de la imagen */
+    border-radius: 50%;
+    /* Hacer la imagen redonda */
+    object-fit: cover;
+    /* Asegurar que la imagen se ajuste al contenedor */
+}
+
+/* --------------------------------------------------------------- */
+
+/* Estilo para el footer */
+
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+.container {
+    flex: 1;
+}
+
+.footer {
+    text-align: center;
+}

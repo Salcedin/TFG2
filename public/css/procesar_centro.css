@@ -1,0 +1,591 @@
+/*------------------------------------------------------------------------*/
+
+/* Estilos para la fuente */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f6f9;
+}
+
+/* Efecto de gradiente para el fondo */
+.css-selector {
+    background: linear-gradient(180deg, #667da7, #000000);
+    background-size: 400% 400%;
+
+    -webkit-animation: AnimationName 0s ease infinite;
+    -moz-animation: AnimationName 0s ease infinite;
+    animation: AnimationName 0s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+    0% {
+        background-position: 0% 51%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 51%
+    }
+}
+
+@-moz-keyframes AnimationName {
+    0% {
+        background-position: 0% 51%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 51%
+    }
+}
+
+@keyframes AnimationName {
+    0% {
+        background-position: 0% 51%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 51%
+    }
+}
+
+/* ------------------------------------------------------------------------------ */
+
+/* Estilos para los enlaces de la barra de navegación */
+.nav-link {
+    position: relative;
+    /* Necesario para el posicionamiento del pseudo-elemento */
+    color: #fff;
+    /* Color del texto */
+    text-decoration: none;
+    /* Quitar subrayado por defecto */
+    font-size: 28px;
+}
+
+/* Efecto de subrayado */
+.nav-link:after {
+    content: '';
+    /* Requiere un contenido para el pseudo-elemento */
+    position: absolute;
+    /* Posiciona el pseudo-elemento */
+    left: 50%;
+    /* Centra el pseudo-elemento en la línea base del texto */
+    bottom: 0;
+    /* Alinea el pseudo-elemento en la parte inferior del enlace */
+    width: 0;
+    /* Comienza sin ancho */
+    height: 2px;
+    /* Grosor del subrayado */
+    background: #fff;
+    /* Color del subrayado */
+    transition: width 0.4s ease, left 0.4s ease;
+    /* Animación para el ancho y la posición */
+    transform: translateX(-50%);
+    /* Centra el subrayado */
+}
+
+/* Cuando se pasa el ratón por encima */
+.nav-link:hover:after {
+    width: 80%;
+    /* Ancho del subrayado al pasar el ratón (ajustado al 70%) */
+    left: 50%;
+    /* Alinea el subrayado a la mitad */
+}
+
+
+/* Clase para ajustar el tamaño del logo */
+.header-img {
+    max-width: 50px;
+    /* Ajusta el tamaño del logo */
+    height: auto;
+    /* Mantén la proporción de la imagen */
+}
+
+/* ------------------------------------------------------------------------------ */
+
+/* Estilos para el id h1 */
+#h1 {
+    font-size: 60px;
+    /* Tamaño del texto */
+    color: #fff;
+    /* Color del texto */
+    text-align: center;
+    /* Centra el texto dentro del contenedor */
+    margin-top: 5px;
+    /* Espaciado superior */
+    margin-bottom: 20px;
+    /* Espaciado inferior */
+    font-weight: bold;
+    /* Grosor de la fuente */
+    opacity: 0;
+    /* Comienza invisible */
+    transform: translateY(-20px);
+    /* Mueve el texto hacia arriba */
+    animation: fadeInUp 2s forwards;
+    /* Aplica la animación */
+    position: relative;
+    /* Establece el contenedor como relativo */
+    /* Elimina la propiedad white-space */
+    white-space: normal;
+    /* Permite que el texto haga saltos de línea */
+    overflow: hidden;
+    /* Oculta cualquier texto que se desborde */
+}
+
+.fade-in-up {
+    animation: fadeInUp 1s ease forwards;
+    /* Cambia la duración y el tipo de animación según tus preferencias */
+    opacity: 0;
+    /* Asegúrate de que comienza como invisible */
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        /* Totalmente invisible al inicio */
+        transform: translateY(-20px);
+        /* Posición inicial */
+    }
+
+    100% {
+        opacity: 1;
+        /* Totalmente visible al final */
+        transform: translateY(0);
+        /* Regresa a su posición original */
+    }
+}
+
+
+/* Ajustes para la imagen */
+#h1 img {
+    height: auto;
+    /* Mantener la proporción de la imagen */
+    opacity: 0.8;
+    /* Ajusta la opacidad de la imagen si lo deseas */
+    position: relative;
+    /* Permite la superposición */
+    z-index: 0;
+    /* Asegura que esté detrás del texto */
+}
+
+/* Asegúrate de que el texto esté por encima de la imagen */
+#h1 h1 {
+    position: absolute;
+    /* Posiciona el texto de forma absoluta */
+    top: 85%;
+    /* Centra verticalmente */
+    left: 50%;
+    /* Centra horizontalmente */
+    transform: translate(-50%, -50%);
+    /* Ajusta la posición centrada */
+    z-index: 1;
+    /* Asegúrate de que esté por encima de la imagen */
+    white-space: nowrap;
+    /* Evita saltos de línea en el texto */
+    /* Texto en cursiva */
+    font-style: italic;
+    /* sombreado del texto */
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+#h1 hr {
+    border: none;
+    /* Elimina el borde por defecto */
+    height: 2px;
+    /* Ajusta el grosor de la línea */
+    background-color: #000000;
+    /* Color de la línea */
+}
+
+.social-links a {
+    text-decoration: none;
+    /* Quitar subrayado */
+    display: inline-block;
+    /* Asegura que el espacio alrededor de la imagen se maneje correctamente */
+    margin: 0;
+    /* Ajusta el margen */
+    padding: 0;
+    /* Ajusta el padding */
+}
+
+.social-links {
+    display: flex;
+    /* Habilita Flexbox */
+    align-items: center;
+    /* Alinea verticalmente al centro */
+}
+
+.social-links img {
+    width: 40px;
+    /* Ancho fijo para todas las imágenes */
+    height: auto;
+    /* Mantiene la proporción de la imagen */
+}
+
+.vertical-separator {
+    border-left: 2px solid #000;
+    /* Borde izquierdo como separador */
+    height: 150%;
+    /* Altura total del contenedor */
+    margin: 0 20px;
+    /* Espaciado horizontal */
+    padding-left: 20px;
+    /* Espaciado interno si se desea */
+}
+
+section {
+    display: flex;
+    width: 750px;
+    height: 470px;
+    margin: 0 auto;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    /* Sombreado alrededor del section */
+    border-radius: 10px;
+    /* (opcional) redondea las esquinas del contenedor */
+}
+
+section a {
+    flex-grow: 1;
+    /* Permite que el enlace ocupe el espacio disponible */
+    display: flex;
+    /* Permite centrar la imagen dentro del enlace */
+}
+
+section img {
+    width: 0px;
+    /* Mantén el ancho inicial en 0 */
+    flex-grow: 1;
+    /* Permite que la imagen crezca para llenar el espacio disponible */
+    object-fit: cover;
+    opacity: 0.8;
+    transition: .5s ease;
+    /* Transición para todas las propiedades */
+}
+
+section img:hover {
+    cursor: pointer;
+    width: 300px;
+    /* Cambia el ancho al pasar el ratón */
+    opacity: 1;
+    /* Opacidad completa al pasar el ratón */
+    filter: contrast(120%);
+    /* Aumenta el contraste */
+}
+
+
+
+hr {
+    border: none;
+    /* Elimina el borde por defecto */
+    height: 5px;
+    /* Grosor de la línea */
+    background-color: #030303;
+    /* Color de la línea */
+    border-radius: 5px;
+    /* Bordes redondeados */
+    margin: 20px 0;
+    /* Espaciado vertical */
+}
+
+/* ------------------------------------------------------------------------------ */
+
+/* Estilo para la tabla */
+.table {
+    max-width: 1500px;
+    margin: auto;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    background-color: #2e3a59;
+    overflow: hidden;
+    border-radius: 14px;
+    font-family: 'Poppins', sans-serif;
+    /* Cambiar fuente */
+}
+
+.table-hover tbody tr:hover {
+    cursor: pointer;
+    /* Cambia el cursor a una mano */
+}
+
+.table-hover tbody tr:hover td,
+.table-hover tbody tr:hover a {
+    color: #fff !important;
+    /* Asegura el color blanco en hover */
+}
+
+.table-dark th {
+    background-color: #445276;
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: 1px;
+    /* Espaciado de letras */
+    padding: 15px;
+}
+
+.table td,
+.table th {
+    padding: 20px;
+    vertical-align: middle;
+    color: #fff;
+    border: none;
+    font-size: 16px;
+}
+
+.table td a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.table td a:hover {
+    color: #f5a623;
+    /* Color naranja para links */
+}
+
+/* Contenedor de la tabla que permite el scroll horizontal */
+.table-responsive {
+    max-width: 100%;
+    overflow-x: auto;
+    user-select: none; /* Desactiva la selección de texto */
+    cursor: grab; /* Cambia el cursor para indicar que se puede arrastrar */
+}
+
+/* Estilo de la barra de desplazamiento */
+.table-responsive::-webkit-scrollbar {
+    height: 6px;
+    /* Barra de desplazamiento más fina */
+}
+
+.table-responsive::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+    /* Color de fondo de la pista */
+    border-radius: 10px;
+}
+
+.table-responsive::-webkit-scrollbar-thumb {
+    background-color: #888;
+    /* Color del pulgar (la parte que se mueve) */
+    border-radius: 10px;
+}
+
+.table-responsive::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+    /* Color del pulgar al hacer hover */
+}
+
+
+/* Botón de Atrás */
+.atras-btn {
+    display: block;
+    width: fit-content;
+    margin: 20px auto;
+    padding: 12px 24px;
+    background-color: #55608f;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    border: 2px solid #445276;
+    border-radius: 8px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.atras-btn:hover {
+    background-color: #445276;
+    color: #fff;
+    border-color: #55608f;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+}
+
+.atras-btn:active {
+    transform: scale(1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/*------------------------------------------------------------------------------*/
+.alert {
+    font-size: 18px;
+    /* Tamaño de texto de la alerta */
+    font-weight: bold;
+    /* Texto en negrita */
+    text-align: center;
+    /* Centrado */
+    margin-top: 20px;
+    /* Margen superior */
+}
+
+#root {
+    display: grid;
+    min-height: 100dvh;
+    grid-template-rows: auto 1fr auto;
+}
+
+/* -------------------------------------------------------------------- */
+
+/* Estilo para el chatbot */
+.chatbot-container {
+    position: fixed;
+    bottom: 70px;
+    /* Espacio por encima del ícono */
+    right: 20px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    display: none;
+    /* Inicialmente oculto */
+    flex-direction: column;
+    opacity: 0;
+    /* Comienza invisible */
+    transform: translateY(20px);
+    /* Comienza desplazado */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    /* Transición suave para abrir/cerrar */
+    z-index: 9999;
+}
+
+.chatbot-container.show {
+    display: flex;
+    /* Cambia a flex cuando esté visible */
+    opacity: 1;
+    /* Hacer visible */
+    transform: translateY(0);
+    /* Regresar a la posición original */
+}
+
+.chatbot-header {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chatbot-body {
+    padding: 10px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.bot-message {
+    background-color: #dad5d5;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px 0;
+}
+
+.chatbot-footer {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.quick-reply {
+    margin: 5px 0;
+    padding: 10px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.close-chat {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Estilo para el ícono del chatbot */
+.chatbot-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    /* Hacerlo completamente redondo */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s;
+    /* Cambia de color al pasar el ratón */
+    width: 70px;
+    /* Aumentar el tamaño del ícono */
+    height: 70px;
+    /* Aumentar el tamaño del ícono */
+}
+
+.chatbot-icon:hover {
+    background-color: #a7d3ff;
+    /* Color al pasar el ratón */
+}
+
+.chatbot-icon-image {
+    width: 60%;
+    /* Ajustar el tamaño de la imagen */
+    height: 60%;
+    /* Ajustar el tamaño de la imagen */
+    border-radius: 50%;
+    /* Hacer la imagen redonda */
+    object-fit: cover;
+    /* Asegurar que la imagen se ajuste al contenedor */
+}
+
+/* --------------------------------------------------------------------------- */
+/* Estilos para el selector de idiomas */
+.language-selector {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    padding: 5px 10px;
+    font-family: Arial, sans-serif;
+    background-color: transparent;
+}
+
+.language-selector label {
+    margin-right: 8px;
+    color: #ffffff;
+    /* Blanco para buen contraste sobre fondos oscuros */
+    font-weight: bold;
+}
+
+.language-selector select {
+    background-color: transparent;
+    border: none;
+    color: #ffffff;
+    /* Blanco para buen contraste */
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    appearance: none;
+    /* Quita el estilo predeterminado del navegador */
+}
+
+.language-selector select:focus {
+    outline: none;
+}
+
+.language-selector select:hover {
+    color: #000000;
+    /* Cambia el color al pasar el cursor */
+}

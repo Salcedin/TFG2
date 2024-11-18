@@ -1,0 +1,206 @@
+/* Efecto de gradiente para el fondo */
+body {
+    background: linear-gradient(90deg, #3995b1, #13728f);
+    background-size: 400% 400%;
+    -webkit-animation: AnimationName 45s ease infinite;
+    -moz-animation: AnimationName 45s ease infinite;
+    animation: AnimationName 45s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+    0% {
+        background-position: 0% 51%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 51%;
+    }
+}
+
+@-moz-keyframes AnimationName {
+    0% {
+        background-position: 0% 51%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 51%;
+    }
+}
+
+@keyframes AnimationName {
+    0% {
+        background-position: 0% 51%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 51%;
+    }
+}
+
+/* ------------------------------------------------------------------------------ */
+
+/* Estilos para los enlaces de la barra de navegación */
+.nav-link {
+    position: relative;
+    color: #fff; /* Color del texto */
+    text-decoration: none; /* Quitar subrayado por defecto */
+    font-size: 28px;
+}
+
+/* Efecto de subrayado */
+.nav-link:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: #fff; /* Color del subrayado */
+    transition: width 0.4s ease, left 0.4s ease;
+    transform: translateX(-50%); /* Centra el subrayado */
+}
+
+/* Cuando se pasa el ratón por encima */
+.nav-link:hover:after {
+    width: 80%; /* Ancho del subrayado al pasar el ratón */
+}
+
+/* Clase para ajustar el tamaño del logo */
+.header-img {
+    max-width: 50px; /* Ajusta el tamaño del logo */
+    height: auto; /* Mantén la proporción de la imagen */
+}
+
+/* ------------------------------------------------------------------------------ */
+
+/* Estilos para el id h1 */
+#h1 {
+    position: absolute; /* Posiciona el texto de forma absoluta */
+    top: 15%; /* Centra verticalmente */
+    font-style: italic; /* Texto en cursiva */
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5); /* Sombreado del texto */
+}
+
+.fade-in-up {
+    animation: fadeInUp 1s ease forwards;
+    opacity: 0; /* Asegúrate de que comienza como invisible */
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0; /* Totalmente invisible al inicio */
+        transform: translateY(-20px); /* Posición inicial */
+    }
+    100% {
+        opacity: 1; /* Totalmente visible al final */
+        transform: translateY(0); /* Regresa a su posición original */
+    }
+}
+
+.social-links a {
+    text-decoration: none; /* Quitar subrayado */
+    display: inline-block; /* Asegura que el espacio alrededor de la imagen se maneje correctamente */
+    margin: 0; /* Ajusta el margen */
+    padding: 0; /* Ajusta el padding */
+}
+
+.social-links {
+    display: flex; /* Habilita Flexbox */
+    align-items: center; /* Alinea verticalmente al centro */
+}
+
+.social-links img {
+    width: 40px; /* Ancho fijo para todas las imágenes */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
+.vertical-separator {
+    border-left: 2px solid #000; /* Borde izquierdo como separador */
+    height: 150%; /* Altura total del contenedor */
+    margin: 0 20px; /* Espaciado horizontal */
+    padding-left: 20px; /* Espaciado interno si se desea */
+}
+
+section {
+    display: flex;
+    width: 750px;
+    height: 470px;
+    margin: 0 auto;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Sombreado alrededor del section */
+    border-radius: 10px; /* (opcional) redondea las esquinas del contenedor */
+}
+
+section img {
+    width: 0px;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: .8;
+    transition: .5s ease;
+}
+
+section img:hover {
+    cursor: crosshair;
+    width: 300px;
+    opacity: 1;
+    filter: contrast(120%);
+}
+
+hr {
+    border: none; /* Elimina el borde por defecto */
+    height: 4px; /* Grosor de la línea */
+    background-color: #3a315a; /* Color de la línea */
+    border-radius: 5px; /* Bordes redondeados */
+    margin: 20px 0; /* Espaciado vertical */
+}
+
+/* ------------------------------------------------------------------------------ */
+
+#universidades {
+    margin-top: 5%;
+}
+
+#barra-busqueda {
+    margin-top: 12%;
+}
+
+/* ------------------------------------------------------------------------------ */
+
+/* Estilos para las tarjetas de las universidades */
+#universidades .card {
+    height: 80%; /* Hace que todas las tarjetas ocupen el 100% de la altura del contenedor */
+}
+
+/* Asegura que el contenedor de la tarjeta sea un flex container */
+#universidades .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra el contenido verticalmente */
+    text-align: center; /* Centra el texto */
+}
+
+/* Asegura que las tarjetas tengan el mismo tamaño */
+#universidades .col-md-4 {
+    display: flex; /* Permite que los elementos secundarios ocupen el mismo tamaño */
+}
+
+/* ------------------------------------------------------------------------------ */
+
+/* Estilos para la navegación de paginación */
+.pagination {
+    position: fixed; /* Fija la posición de la paginación */
+    bottom: 200px; /* Ajusta la distancia desde el fondo de la página */
+    left: 50%; /* Centra horizontalmente en la página */
+    transform: translateX(-50%); /* Compensa el desplazamiento del centrado */
+    z-index: 1000; /* Asegura que la paginación esté por encima de otros elementos */
+}
+
+/* Espaciado para el contenedor de universidades */
+#universidades {
+    margin-bottom: 10px; /* Espacio para no solaparse con la paginación */
+}

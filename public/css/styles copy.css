@@ -1,0 +1,225 @@
+/* Efecto de gradiente para el fondo */
+.css-selector {
+    background: linear-gradient(90deg, #3995b1, #13728f);
+    background-size: 400% 400%;
+
+    -webkit-animation: AnimationName 45s ease infinite;
+    -moz-animation: AnimationName 45s ease infinite;
+    animation: AnimationName 45s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+    0% {
+        background-position: 0% 51%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 51%
+    }
+}
+
+@-moz-keyframes AnimationName {
+    0% {
+        background-position: 0% 51%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 51%
+    }
+}
+
+@keyframes AnimationName {
+    0% {
+        background-position: 0% 51%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 51%
+    }
+}
+
+/* ------------------------------------------------------------------------------ */
+
+/* Estilos para los enlaces de la barra de navegación */
+.nav-link {
+    position: relative;
+    /* Necesario para el posicionamiento del pseudo-elemento */
+    color: #fff;
+    /* Color del texto */
+    text-decoration: none;
+    /* Quitar subrayado por defecto */
+    font-size: 28px;
+}
+
+/* Efecto de subrayado */
+.nav-link:after {
+    content: '';
+    /* Requiere un contenido para el pseudo-elemento */
+    position: absolute;
+    /* Posiciona el pseudo-elemento */
+    left: 50%;
+    /* Centra el pseudo-elemento en la línea base del texto */
+    bottom: 0;
+    /* Alinea el pseudo-elemento en la parte inferior del enlace */
+    width: 0;
+    /* Comienza sin ancho */
+    height: 2px;
+    /* Grosor del subrayado */
+    background: #fff;
+    /* Color del subrayado */
+    transition: width 0.4s ease, left 0.4s ease;
+    /* Animación para el ancho y la posición */
+    transform: translateX(-50%);
+    /* Centra el subrayado */
+}
+
+/* Cuando se pasa el ratón por encima */
+.nav-link:hover:after {
+    width: 80%;
+    /* Ancho del subrayado al pasar el ratón (ajustado al 70%) */
+    left: 50%;
+    /* Alinea el subrayado a la mitad */
+}
+
+
+
+/* Clase para ajustar el tamaño del logo */
+.header-img {
+    max-width: 50px;
+    /* Ajusta el tamaño del logo */
+    height: auto;
+    /* Mantén la proporción de la imagen */
+}
+
+/* ------------------------------------------------------------------------------ */
+
+/* Estilos para el id h1 */
+#h1 {
+    font-size: 60px; /* Tamaño del texto */
+    color: #fff; /* Color del texto */
+    text-align: center; /* Centra el texto dentro del contenedor */
+    margin-top: 5px; /* Espaciado superior */
+    margin-bottom: 20px; /* Espaciado inferior */
+    font-weight: bold; /* Grosor de la fuente */
+    opacity: 0; /* Comienza invisible */
+    transform: translateY(-20px); /* Mueve el texto hacia arriba */
+    animation: fadeInUp 2s forwards; /* Aplica la animación */
+    position: relative; /* Establece el contenedor como relativo */
+    /* Elimina la propiedad white-space */
+    white-space: normal; /* Permite que el texto haga saltos de línea */
+    overflow: hidden; /* Oculta cualquier texto que se desborde */
+}
+
+.fade-in-up {
+    animation: fadeInUp 1s ease forwards; /* Cambia la duración y el tipo de animación según tus preferencias */
+    opacity: 0; /* Asegúrate de que comienza como invisible */
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0; /* Totalmente invisible al inicio */
+        transform: translateY(-20px); /* Posición inicial */
+    }
+    100% {
+        opacity: 1; /* Totalmente visible al final */
+        transform: translateY(0); /* Regresa a su posición original */
+    }
+}
+
+
+/* Ajustes para la imagen */
+#h1 img {
+    height: auto; /* Mantener la proporción de la imagen */
+    opacity: 0.8; /* Ajusta la opacidad de la imagen si lo deseas */
+    position: relative; /* Permite la superposición */
+    z-index: 0; /* Asegura que esté detrás del texto */
+}
+
+/* Asegúrate de que el texto esté por encima de la imagen */
+#h1 h1 {
+    position: absolute; /* Posiciona el texto de forma absoluta */
+    top: 85%; /* Centra verticalmente */
+    left: 50%; /* Centra horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta la posición centrada */
+    z-index: 1; /* Asegúrate de que esté por encima de la imagen */
+    white-space: nowrap; /* Evita saltos de línea en el texto */
+    /* Texto en cursiva */
+    font-style: italic;
+    /* sombreado del texto */
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+#h1 hr {
+    border: none; /* Elimina el borde por defecto */
+    height: 2px; /* Ajusta el grosor de la línea */
+    background-color: #000000; /* Color de la línea */
+}
+
+.social-links a {
+    text-decoration: none; /* Quitar subrayado */
+    display: inline-block; /* Asegura que el espacio alrededor de la imagen se maneje correctamente */
+    margin: 0; /* Ajusta el margen */
+    padding: 0; /* Ajusta el padding */
+}
+
+.social-links {
+    display: flex; /* Habilita Flexbox */
+    align-items: center; /* Alinea verticalmente al centro */
+}
+
+.social-links img {
+    width: 40px; /* Ancho fijo para todas las imágenes */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
+.vertical-separator {
+    border-left: 2px solid #000; /* Borde izquierdo como separador */
+    height: 150%; /* Altura total del contenedor */
+    margin: 0 20px; /* Espaciado horizontal */
+    padding-left: 20px; /* Espaciado interno si se desea */
+}
+
+section {
+    display: flex;
+    width: 750px;
+    height: 470px;
+    margin: 0 auto;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Sombreado alrededor del section */
+    border-radius: 10px; /* (opcional) redondea las esquinas del contenedor */
+}
+
+section img {
+    width: 0px;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: .8;
+    transition: .5s ease;
+}
+
+section img:hover {
+    cursor: crosshair;
+    width: 300px;
+    opacity: 1;
+    filter: contrast(120%);
+}
+
+hr {
+    border: none; /* Elimina el borde por defecto */
+    height: 4px; /* Grosor de la línea */
+    background-color: #3a315a; /* Color de la línea */
+    border-radius: 5px; /* Bordes redondeados */
+    margin: 20px 0; /* Espaciado vertical */
+}
+/* ------------------------------------------------------------------------------ */
